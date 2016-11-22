@@ -1,5 +1,5 @@
 <form id='new_article' class='new_article' accept-charset="UTF-8"
-  action='/articles' method='post'>
+  action="<%= action %>" method='post'>
   <input  type="hidden"
           name="authenticity_token"
           value="<%= form_authenticity_token %>">
@@ -9,7 +9,7 @@
   <% end %>
 
   <label for='article_title'>Title</label>
-  <input id='article_title' name='article[title]' type='text' value="<%= @article.title}%>">
+  <input id='article_title' name='article[title]' type='text' value="<%= @article.title %>">
   <label for='article_body'>Body</label>
   <textarea id='article_body' name='article[body]'><%= @article.body %></textarea>
   <input name='commit' type='submit' data-disable-width="<%= submit_text %>"

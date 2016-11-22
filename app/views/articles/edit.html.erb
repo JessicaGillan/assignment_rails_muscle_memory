@@ -1,3 +1,4 @@
 <h1>Editing Article #<%= @article.id %></h1>
 
-<%= render :partial => 'article_form', :locals => { submit_text: 'Edit Post' } %>
+<%= render :partial => 'article_form', :locals => { submit_text: 'Edit Post',
+                                                    action: "/articles/#{@article.id}" } %>
