@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/new', to: 'articles#new'
   post '/new', to: 'articles#create'
   get '/article/:id', to: 'articles#show'
+  root to: 'articles#index'
 end
