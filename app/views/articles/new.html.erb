@@ -1,0 +1,18 @@
+<form id='new_article' class='new_article' accept-charset="UTF-8"
+      action='/create' method='post'>
+      <input  type="hidden"
+              name="authenticity_token"
+              value="<%= form_authenticity_token %>">
+     <label for='article_title'>Title</label>
+     <input id='article_title' name='article[title]' type='text'>
+     <label for='article_body'>Body</label>
+     <input id='article_body' name='article[body]' type='text'>
+     <input name='commit' type='submit' data-disable-width='Create Post'
+            value='Create Post'>
+</form>
+
+<%= form_tag("/destination_url", :method => "get") do %>
+  <%= label_tag(:name_of_field, "The Field Label:") %>
+  <%= text_field_tag(:name_of_field) %>
+  <%= submit_tag("Search") %>
+<% end %>
