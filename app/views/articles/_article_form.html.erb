@@ -9,9 +9,9 @@
   <% end %>
 
   <label for='article_title'>Title</label>
-  <input id='article_title' name='article[title]' type='text' value=<%= @article.title %>>
+  <input id='article_title' name='article[title]' type='text' value="<%= @article.title}%>">
   <label for='article_body'>Body</label>
-  <textarea id='article_body' name='article[body]' value="<%= @article.body %>"></textarea>
-  <input name='commit' type='submit' data-disable-width=<%= submit_text %>
-        value=<%= submit_text  %>>
+  <textarea id='article_body' name='article[body]'><%= @article.body %></textarea>
+  <input name='commit' type='submit' data-disable-width="<%= submit_text %>"
+        value="<%= submit_text  %>">
 </form>
